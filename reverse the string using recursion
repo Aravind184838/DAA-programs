@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <string.h>
+void reverseString(char str[])
+ {
+    if (strlen(str) == 0) 
+	{
+        return;
+    } else 
+	{
+        reverseString(&str[1]);
+        printf("%c", str[0]);
+    }
+}
+int main() 
+{
+    char str[] = "1,2,3,4,5";
+    reverseString(str);
+    return 0;
+}
